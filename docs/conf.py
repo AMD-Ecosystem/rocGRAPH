@@ -30,8 +30,12 @@ setting_all_article_info = True
 all_article_info_os = ["linux"]
 all_article_info_author = ""
 
+html_context = {"docs_header_version": "26.03"}
 html_theme = "rocm_docs_theme"
-html_theme_options = {"flavor": "rocm-ds"}
+html_theme_options = {
+    "flavor": "rocm-ds",
+    "repository_url": "https://github.com/AMD-Ecosystem/rocGRAPH/",
+}
 
 extensions = [
     "rocm_docs",
