@@ -32,6 +32,11 @@
 
 #include <hipcub/hipcub.hpp>
 
+// ROCm 10.1: hip::std::min/max/memory_order_* require libhipcxx (hipccl) headers.
+// <hip/atomic> alone provides the hip::std namespace alias but not the
+// algorithm definitions; <hip/std/functional> pulls in min/max.
+#include <hip/std/functional>
+
 #include <optional>
 
 namespace rocgraph
